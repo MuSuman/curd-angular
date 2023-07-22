@@ -1,0 +1,62 @@
+<div style="padding: 24px;display: flex;flex-direction: column;gap: 24px;">
+
+  <!-- <a (click)="navigateHome()">Go to Home</a> -->
+
+  <div style="width: 100%;align-items: center;justify-content: flex-end;display: flex;">
+    
+    <button mat-raised-button color="primary" style="padding: 0 35px !important;" (click)="navigateHome()">Home</button>
+  
+</div>
+
+<h1 class="header">Cart</h1>
+  <div class="example-container mat-elevation-z8" *ngIf="elements.length">
+    <div class="animated fadeIn">
+      <mat-table #table [dataSource]="dataSource" class="mat-elevation-z20">
+  
+  
+          <ng-container matColumnDef="name">
+              <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+          </ng-container>
+  
+          <ng-container matColumnDef="price">
+              <mat-header-cell *matHeaderCellDef> Price </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.price+'$'}} </mat-cell>
+          </ng-container>
+  
+          <ng-container matColumnDef="quantity">
+              <mat-header-cell *matHeaderCellDef> Quantity </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.quantity}} </mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="edit">
+            <mat-header-cell *matHeaderCellDef>  </mat-header-cell>
+            <mat-cell *matCellDef="let element"> 
+              <mat-icon (click)="edit(element)">edit</mat-icon> 
+            </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="delete">
+          <mat-header-cell *matHeaderCellDef>  </mat-header-cell>
+          <mat-cell *matCellDef="let element"> 
+            <mat-icon (click)="deleteItem(element)">delete</mat-icon> 
+          </mat-cell>
+      </ng-container>
+  
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;" [ngClass]="{'green': row.quantity >= 100, 'orange':(row.quantity >= 10 && row.quantity < 100),'red':row.quantity < 10  }"></mat-row>
+      </mat-table>
+  </div>
+  </div>
+
+  <div style="display: flex;align-items: center; justify-content: center;height: 200px;width: 100%;" *ngIf="!elements?.length">
+    <h2>Cart is empty</h2>
+  </div>
+
+  <div style="width: 100%;align-items: center;justify-content: flex-end;display: flex;">
+    
+    <button mat-raised-button color="primary" style="padding: 0 35px !important;" (click)="navigateHome()">Home</button>
+  
+</div>
+
+</div>

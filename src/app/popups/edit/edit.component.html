@@ -1,0 +1,19 @@
+<div style="display: flex;flex-direction: column;gap: 24px;align-items: center;">
+
+
+  <strong>{{data.name}}</strong>
+
+  <div style="width: 120px;">
+    <img src="{{data.image}}" style="width: 100%;">
+    </div>
+
+  <div style="display: flex;flex-direction: row;gap: 8px;">
+
+    <strong class="counter" (click)="updateQuantity(data,'minus')">-</strong>
+    <input style="width: 100px;" type="number" [(ngModel)]="data.quantity" min="0">
+    <strong class="counter" (click)="updateQuantity(data,'plus')">+</strong>
+
+   </div>
+
+  <button mat-raised-button color="primary" (click)="save()">Save</button>
+</div>

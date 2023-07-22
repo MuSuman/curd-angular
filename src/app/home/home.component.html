@@ -1,0 +1,57 @@
+<div style="height: 100%;width: 100%;padding: 24px; display: flex;gap:32px; flex-direction: column;">
+
+  <!-- <a (click)="gotoCart()">Go to cart</a> -->
+
+  <div style="width: 100%;align-items: center;justify-content: flex-end;display: flex;">
+    
+    <button mat-raised-button style="padding: 0 35px !important;" color="primary" (click)="gotoCart()">Cart</button>
+  
+</div>
+
+  <div style="display: flex;flex-direction: column;gap: 24px;" *ngFor="let categories of myService.appData">
+
+    <h1 class="header">{{categories.category}}</h1>
+
+    <div style="display: flex; flex-direction: column; gap:24px" *ngFor="let subCategories of categories.subCategories">
+    
+      <h2>{{subCategories.categoryName}}</h2>
+
+    <div style="display: flex; flex-direction: row;gap: 16px; flex-wrap: wrap;" >
+    
+      <div style="padding: 15px; display: flex;flex-direction: column;gap:16px" *ngFor="let product of subCategories.products">
+      
+      <div style="width: 120px;">
+      <img src="{{product.image}}" style="width: 100%;">
+      </div>
+
+      <div>
+       <b>{{product.itemName}}</b> 
+      </div>
+
+      <div>
+        {{product.description}}
+      </div>
+
+      <div style="display: flex;flex-direction: row;gap: 8px;">
+
+       <strong class="counter" (click)="updateQuantity(product,'minus')">-</strong>
+       <input type="number" style="width: 100px;" [(ngModel)]="product.quantity" min="0">
+       <strong class="counter" (click)="updateQuantity(product,'plus')">+</strong>
+
+      </div>
+
+      </div>
+
+    </div>
+
+    </div>
+
+  </div>
+
+  <div style="width: 100%;align-items: center;justify-content: flex-end;display: flex;">
+    
+      <button mat-raised-button style="padding: 0 35px !important;" color="primary" (click)="gotoCart()">Cart</button>
+    
+  </div>
+
+</div>

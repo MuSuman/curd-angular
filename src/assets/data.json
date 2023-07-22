@@ -1,0 +1,221 @@
+[
+    {
+        "category": "Electronics",
+        "subCategories": [
+            {
+                "categoryName": "Mobiles",
+                "products": [
+                    {
+                        "itemName": "iPhone",
+                        "price": 20,
+                        "image": "assets/iPhone.png",
+                        "code": "Elec-Mob-1",
+                        "quantity": 0,
+                        "description": ""
+                    },
+                    {
+                        "itemName": "Samsung S20",
+                        "price": 18,
+                        "image": "assets/s20.jpeg",
+                        "code": "Elec-Mob-2",
+                        "quantity": 0,
+                        "description": ""
+                    },
+                    {
+                        "itemName": "Samsung S21",
+                        "price": 18,
+                        "image": "assets/s21.jpg",
+                        "code": "Elec-Mob-3",
+                        "quantity": 0,
+                        "description": ""
+                    },
+                    {
+                        "itemName": "Nokia",
+                        "price": 18,
+                        "image": "assets/nokia.jpeg",
+                        "code": "Elec-Mob-4",
+                        "quantity": 0,
+                        "description": ""
+                    },
+                    {
+                        "itemName": "MI",
+                        "price": 18,
+                        "image": "assets/mi.jpeg",
+                        "code": "Elec-Mob-5",
+                        "quantity": 0,
+                        "description": ""
+                    },
+                    {
+                        "itemName": "POCO",
+                        "price": 18,
+                        "image": "assets/poco.jpeg",
+                        "code": "Elec-Mob-6",
+                        "quantity": 0,
+                        "description": ""
+                    },
+                    {
+                        "itemName": "Vivo",
+                        "price": 18,
+                        "image": "assets/vivo.jpeg",
+                        "code": "Elec-Mob-7",
+                        "quantity": 0,
+                        "description": ""
+                    },
+                    {
+                        "itemName": "Micromax",
+                        "price": 18,
+                        "image": "assets/micromax.jpg",
+                        "code": "Elec-Mob-8",
+                        "quantity": 0,
+                        "description": ""
+                    }
+                ]
+            },
+            {
+                "categoryName": "Refrigerator",
+                "products": [
+                    {
+                        "itemName": "Samsung",
+                        "price": 12,
+                        "image": "assets/f-samsung.jpg",
+                        "code": "Elec-Ref-2",
+                        "quantity": 0,
+                        "description": ""
+                    },
+                    {
+                        "itemName": "LG",
+                        "price": 14,
+                        "image": "assets/f-lg.avif",
+                        "code": "Elec-Ref-3",
+                        "quantity": 0,
+                        "description": ""
+                    },
+                    {
+                        "itemName": "Godrej",
+                        "price": 14,
+                        "image": "assets/f-godrej.jpg",
+                        "code": "Elec-Ref-4",
+                        "quantity": 0,
+                        "description": ""
+                    },
+                    {
+                        "itemName": "Haier",
+                        "price": 14,
+                        "image": "assets/f-heir.jpg",
+                        "code": "Elec-Ref-5",
+                        "quantity": 0,
+                        "description": ""
+                    },
+                    {
+                        "itemName": "Lloyd",
+                        "price": 14,
+                        "image": "assets/f-Lloyd.png",
+                        "code": "Elec-Ref-6",
+                        "quantity": 0,
+                        "description": ""
+                    },
+                    {
+                        "itemName": "Panasonic",
+                        "price": 14,
+                        "image": "assets/f-panasonic.jpeg",
+                        "code": "Elec-Ref-7",
+                        "quantity": 0,
+                        "description": ""
+                    },
+                    {
+                        "itemName": "Whirlpool",
+                        "price": 14,
+                        "image": "assets/f-wirl.webp",
+                        "code": "Elec-Ref-8",
+                        "quantity": 0,
+                        "description": ""
+                    }
+                ]
+            },
+            {
+                "categoryName": "TV",
+                "products": [
+                    {
+                        "itemName": "MI",
+                        "price": 8,
+                        "image": "assets/tv.jpg",
+                        "code": "Elec-tv-003",
+                        "quantity": 0,
+                        "description": ""
+                    },
+                    {
+                        "itemName": "TCL",
+                        "price": 8,
+                        "image": "assets/tv1.jpg",
+                        "code": "Elec-tv-004",
+                        "quantity": 0,
+                        "description": ""
+                    },
+                    {
+                        "itemName": "Samsung TV",
+                        "price": 8,
+                        "image": "assets/tv2.jpg",
+                        "code": "Elec-tv-005",
+                        "quantity": 0,
+                        "description": ""
+                    },
+                    {
+                        "itemName": "SANSUI",
+                        "price": 8,
+                        "image": "assets/tv3.webp",
+                        "code": "Elec-tv-006",
+                        "quantity": 0,
+                        "description": ""
+                    },
+                    {
+                        "itemName": "BPL",
+                        "price": 8,
+                        "image": "assets/tv4.webp",
+                        "code": "Elec-tv-009",
+                        "quantity": 0,
+                        "description": ""
+                    },
+                    {
+                        "itemName": "Realme",
+                        "price": 8,
+                        "image": "assets/tv5.jpg",
+                        "code": "Elec-tv-008",
+                        "quantity": 0,
+                        "description": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "category": "Clothes",
+        "subCategories": [
+            {
+                "categoryName": "Mens",
+                "products": [
+                    {
+                        "itemName": "Shirt",
+                        "price": 3,
+                        "code": "Cloth-Men-01",
+                        "image": "assets/tshirt.png",
+                        "quantity": 0,
+                        "description": ""
+                    }
+                ]
+            },
+            {
+                "categoryName": "Ladies",
+                "products": [
+                    {
+                        "itemName": "saree",
+                        "price": 3,
+                        "code": "Cloth-Lad-01",
+                        "image": "assets/saree.jpeg",
+                        "quantity": 0,
+                        "description": ""
+                    }
+                ]
+            }
+        ]
+    }
+]
