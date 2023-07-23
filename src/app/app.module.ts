@@ -15,13 +15,18 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatDialogModule} from '@angular/material/dialog';
 import { EditComponent } from './popups/edit/edit.component';
 import { MatButtonModule } from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import { SearchPipe } from './services/search.pipe';
+import {MatSelectModule} from '@angular/material/select';
+
 
 @NgModule({
   declarations: [		
     AppComponent,
       HomeComponent,
       CartComponent,
-      EditComponent
+      EditComponent,
+      SearchPipe
    ],
   imports: [
     BrowserModule,
@@ -33,7 +38,9 @@ import { MatButtonModule } from '@angular/material/button';
     FormsModule,
     MatTableModule,
     MatDialogModule,
-    MatButtonModule
+    MatButtonModule,
+    MatInputModule,
+    MatSelectModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent]

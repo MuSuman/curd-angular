@@ -9,6 +9,9 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
+  public searchText: string = '';
+  public selectedSearchType: string = 'Product';
+
   constructor(public myService:AppService, private router:Router) { }
 
   ngOnInit() {
@@ -34,6 +37,11 @@ export class HomeComponent implements OnInit {
     } else {
       product.quantity++;
     }
+  }
+
+
+  public searchTypeChange(event: any): void {
+    this.selectedSearchType = event.value;
   }
 
 }

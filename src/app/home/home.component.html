@@ -8,17 +8,34 @@
   
 </div>
 
-  <div style="display: flex;flex-direction: column;gap: 24px;" *ngFor="let categories of myService.appData">
+<div style="display: flex;flex-direction: row;gap: 24px;">
+
+  <mat-form-field>
+    <mat-label>Search By Type</mat-label>
+    <mat-select (selectionChange)="searchTypeChange($event)" [value]="selectedSearchType">
+      <mat-option *ngFor="let item of ['Product', 'Category','Sub category']" [value]="item">
+        {{item}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Search" [(ngModel)]="searchText">
+  </mat-form-field>
+
+<!-- </form> -->
+
+  <div style="display: flex;flex-direction: column;gap: 24px;" *ngFor="let categories of myService.appData | search: searchText:selectedSearchType:1">
 
     <h1 class="header">{{categories.category}}</h1>
 
-    <div style="display: flex; flex-direction: column; gap:24px" *ngFor="let subCategories of categories.subCategories">
+    <div style="display: flex; flex-direction: column; gap:24px" *ngFor="let subCategories of categories.subCategories | search: searchText:selectedSearchType:2">
     
       <h2>{{subCategories.categoryName}}</h2>
 
     <div style="display: flex; flex-direction: row;gap: 16px; flex-wrap: wrap;" >
     
-      <div style="padding: 15px; display: flex;flex-direction: column;gap:16px" *ngFor="let product of subCategories.products">
+      <div style="padding: 15px; display: flex;flex-direction: column;gap:16px" *ngFor="let product of subCategories.products | search: searchText:selectedSearchType:3">
       
       <div style="width: 120px;">
       <img src="{{product.image}}" style="width: 100%;">
